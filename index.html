@@ -1,291 +1,873 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="CV of Jiří Blahút — software developer specialising in Python, PHP, Odoo, backend systems and infrastructure automation.">
-  <meta name="theme-color" content="#172033">
-  <title>Jiří Blahút — Software Developer</title>
-  <style>
-    :root {
-      color-scheme: light;
-      --ink: #202a3b;
-      --muted: #657187;
-      --accent: #3267a8;
-      --line: #e2e7ef;
-      --paper: #fff;
-      --canvas: #f2f5f9;
-      --soft: #f5f8fc;
-    }
-    * { box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
-    body {
-      margin: 0;
-      background: var(--canvas);
-      color: var(--ink);
-      font: 15px/1.65 system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-    }
-    a { color: var(--accent); text-decoration: none; }
-    a:hover { text-decoration: underline; }
-    .page { max-width: 1080px; margin: 42px auto; padding: 0 22px; }
-    .resume {
-      display: grid;
-      grid-template-columns: 290px minmax(0, 1fr);
-      background: var(--paper);
-      box-shadow: 0 18px 55px rgba(25, 39, 62, .09);
-      border: 1px solid var(--line);
-      border-radius: 12px;
-      overflow: hidden;
-    }
-    aside {
-      background: #f7f9fc;
-      border-right: 1px solid var(--line);
-      padding: 38px 28px;
-    }
-    main { padding: 42px 46px 48px; min-width: 0; }
-    h1, h2, h3, p { margin-top: 0; }
-    h1 { font-size: 2.35rem; line-height: 1.12; letter-spacing: -.045em; margin-bottom: 8px; }
-    .role { color: var(--accent); font-weight: 650; font-size: 1.05rem; margin-bottom: 22px; }
-    .intro { color: #48556a; font-size: 1.02rem; max-width: 720px; margin-bottom: 0; }
-    .section { margin-top: 38px; }
-    .section-title {
-      font-size: .82rem; text-transform: uppercase; letter-spacing: .13em;
-      color: var(--accent); font-weight: 750; margin-bottom: 19px;
-      display: flex; align-items: center; gap: 12px;
-    }
-    .section-title::after { content: ""; height: 1px; background: var(--line); flex: 1; }
-    .entry { margin-bottom: 27px; }
-    .entry:last-child { margin-bottom: 0; }
-    .entry-head { display: flex; justify-content: space-between; gap: 18px; align-items: baseline; }
-    h3 { font-size: 1.08rem; line-height: 1.35; margin-bottom: 3px; }
-    .company { color: var(--muted); font-weight: 550; }
-    .date { color: var(--muted); font-size: .88rem; white-space: nowrap; }
-    .location { color: var(--muted); font-size: .88rem; margin: 2px 0 9px; }
-    ul { margin: 8px 0 0; padding-left: 19px; }
-    li { margin: 4px 0; padding-left: 2px; }
-    .subheading { font-size: .88rem; color: #3e4b60; font-weight: 700; margin: 14px 0 4px; }
-    .contact-list, .plain-list { list-style: none; padding: 0; margin: 0; }
-    .contact-list li { margin: 0 0 11px; overflow-wrap: anywhere; }
-    .side-title { color: var(--muted); text-transform: uppercase; font-size: .73rem; font-weight: 750; letter-spacing: .12em; margin: 29px 0 12px; }
-    .side-title:first-child { margin-top: 0; }
-    .skill-group { margin-bottom: 17px; }
-    .skill-group strong { display: block; font-size: .88rem; margin-bottom: 4px; }
-    .skill-group p { color: #59667a; font-size: .88rem; margin: 0; line-height: 1.55; }
-    .tag-list { display: flex; flex-wrap: wrap; gap: 7px; }
-    .tag { background: #eaf0f8; color: #344d70; border-radius: 5px; padding: 3px 8px; font-size: .82rem; }
-    .top-links { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 23px; font-size: .9rem; font-weight: 650; }
-    .top-links a { border-bottom: 1px solid #b9cbe0; padding-bottom: 2px; }
-    .certificate { padding: 13px 15px; background: var(--soft); border: 1px solid var(--line); border-radius: 7px; }
-    .certificate strong { display: block; }
-    .certificate span { color: var(--muted); font-size: .9rem; }
-    .small-note { color: var(--muted); font-size: .86rem; }
-    footer { text-align: center; color: #7a8596; font-size: .8rem; padding: 20px 0 0; }
-    @media (max-width: 760px) {
-      .page { margin: 0 auto; padding: 0; }
-      .resume { display: block; border: 0; border-radius: 0; }
-      aside { border-right: 0; border-bottom: 1px solid var(--line); padding: 28px 25px; }
-      main { padding: 32px 25px 40px; }
-      .entry-head { display: block; }
-      .date { display: block; margin-top: 3px; }
-      h1 { font-size: 2rem; }
-    }
-    @media print {
-      body { background: #fff; font-size: 10pt; }
-      .page { max-width: none; margin: 0; padding: 0; }
-      .resume { box-shadow: none; border: 0; border-radius: 0; }
-      aside { background: #f7f9fc !important; print-color-adjust: exact; }
-      a { color: inherit; }
-      .section, .entry { break-inside: avoid; }
-      footer { display: none; }
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#17243a">
+    <meta name="description" content="CV of Jiří Blahút — Senior Software Developer specializing in backend engineering, business applications, system integration, and infrastructure automation.">
+    <title>Jiří Blahút — Senior Software Developer</title>
+
+    <style>
+        :root {
+            color-scheme: light;
+            --navy: #17243a;
+            --navy-light: #22334e;
+            --blue: #4e8ce8;
+            --blue-light: #eaf2ff;
+            --text: #273449;
+            --muted: #64748b;
+            --border: #e3e9f1;
+            --surface: #ffffff;
+            --background: #f1f4f8;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            padding: 40px 20px;
+            background: var(--background);
+            color: var(--text);
+            font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI",
+                Roboto, Helvetica, Arial, sans-serif;
+            font-size: 14px;
+            line-height: 1.65;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: var(--blue);
+        }
+
+        .resume {
+            display: grid;
+            grid-template-columns: 300px minmax(0, 1fr);
+            width: min(1120px, 100%);
+            margin: 0 auto;
+            background: var(--surface);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 16px 50px rgba(23, 36, 58, 0.12);
+        }
+
+        /* Sidebar */
+
+        .sidebar {
+            padding: 42px 30px;
+            background: var(--navy);
+            color: #d8e1ef;
+        }
+
+        .identity {
+            margin-bottom: 36px;
+        }
+
+        .identity h1 {
+            margin: 0 0 8px;
+            color: #ffffff;
+            font-size: 29px;
+            font-weight: 750;
+            line-height: 1.15;
+            letter-spacing: -0.8px;
+        }
+
+        .identity .role {
+            margin: 0;
+            color: #91baff;
+            font-size: 14px;
+            font-weight: 600;
+            line-height: 1.5;
+        }
+
+        .sidebar-section {
+            margin-top: 32px;
+        }
+
+        .sidebar-heading {
+            margin: 0 0 14px;
+            padding-bottom: 8px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.16);
+            color: #ffffff;
+            font-size: 11px;
+            font-weight: 750;
+            letter-spacing: 1.6px;
+            text-transform: uppercase;
+        }
+
+        .contact-item {
+            margin: 0 0 13px;
+            overflow-wrap: anywhere;
+        }
+
+        .contact-label {
+            display: block;
+            margin-bottom: 2px;
+            color: #91a4bf;
+            font-size: 10px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .contact-item a,
+        .contact-item span {
+            color: #e4ebf5;
+            font-size: 13px;
+        }
+
+        .contact-item a:hover {
+            color: #91baff;
+        }
+
+        .skill-group {
+            margin-bottom: 15px;
+        }
+
+        .skill-group h4 {
+            margin: 0 0 5px;
+            color: #a9bdd7;
+            font-size: 12px;
+            font-weight: 650;
+        }
+
+        .skill-group p {
+            margin: 0;
+            color: #e0e7f1;
+            font-size: 12px;
+            line-height: 1.7;
+        }
+
+        .language {
+            display: flex;
+            justify-content: space-between;
+            gap: 12px;
+            margin-bottom: 9px;
+            font-size: 13px;
+        }
+
+        .language span:last-child {
+            color: #a9bdd7;
+            text-align: right;
+        }
+
+        /* Main content */
+
+        .content {
+            min-width: 0;
+            padding: 48px 48px 52px;
+        }
+
+        .intro {
+            margin-bottom: 37px;
+            padding-bottom: 28px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .eyebrow {
+            margin: 0 0 8px;
+            color: var(--blue);
+            font-size: 11px;
+            font-weight: 750;
+            letter-spacing: 1.7px;
+            text-transform: uppercase;
+        }
+
+        .intro h2 {
+            margin: 0 0 13px;
+            color: var(--navy);
+            font-size: 25px;
+            line-height: 1.3;
+            letter-spacing: -0.5px;
+        }
+
+        .intro p {
+            max-width: 680px;
+            margin: 0;
+            color: #526176;
+            font-size: 14px;
+            line-height: 1.8;
+        }
+
+        .section {
+            margin-top: 36px;
+        }
+
+        .section-heading {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin: 0 0 21px;
+            color: var(--navy);
+            font-size: 17px;
+            font-weight: 750;
+            letter-spacing: -0.2px;
+        }
+
+        .section-heading::after {
+            height: 1px;
+            flex: 1;
+            background: var(--border);
+            content: "";
+        }
+
+        /* Experience */
+
+        .experience-item {
+            position: relative;
+            margin-bottom: 30px;
+            padding-left: 20px;
+            border-left: 2px solid var(--border);
+        }
+
+        .experience-item::before {
+            position: absolute;
+            top: 5px;
+            left: -6px;
+            width: 10px;
+            height: 10px;
+            border: 2px solid var(--blue);
+            border-radius: 50%;
+            background: white;
+            content: "";
+        }
+
+        .experience-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .job-header {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            gap: 16px;
+            margin-bottom: 3px;
+        }
+
+        .job-title {
+            margin: 0;
+            color: var(--navy);
+            font-size: 15px;
+            font-weight: 750;
+            line-height: 1.4;
+        }
+
+        .job-company {
+            margin: 3px 0 0;
+            color: var(--blue);
+            font-size: 13px;
+            font-weight: 650;
+        }
+
+        .job-date {
+            flex-shrink: 0;
+            color: var(--muted);
+            font-size: 11px;
+            font-weight: 650;
+            white-space: nowrap;
+        }
+
+        .job-location {
+            margin: 2px 0 11px;
+            color: var(--muted);
+            font-size: 11px;
+        }
+
+        .experience-item ul {
+            margin: 8px 0 13px;
+            padding-left: 18px;
+            color: #526176;
+            font-size: 12.5px;
+        }
+
+        .experience-item li {
+            margin-bottom: 5px;
+            padding-left: 2px;
+        }
+
+        .subheading {
+            margin: 15px 0 8px;
+            color: var(--navy);
+            font-size: 11px;
+            font-weight: 750;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        /* Projects */
+
+        .projects {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 12px;
+            margin-top: 10px;
+        }
+
+        .project {
+            padding: 13px 14px;
+            border: 1px solid var(--border);
+            border-radius: 7px;
+            background: #fbfcfe;
+        }
+
+        .project h4 {
+            margin: 0 0 5px;
+            color: var(--navy);
+            font-size: 12px;
+            font-weight: 750;
+            line-height: 1.45;
+        }
+
+        .project p {
+            margin: 0;
+            color: #64748b;
+            font-size: 11.5px;
+            line-height: 1.6;
+        }
+
+        /* Education and other sections */
+
+        .education-item,
+        .certificate-item {
+            margin-bottom: 17px;
+        }
+
+        .education-item:last-child,
+        .certificate-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .education-item h3,
+        .certificate-item h3 {
+            margin: 0;
+            color: var(--navy);
+            font-size: 14px;
+            font-weight: 750;
+        }
+
+        .education-item .institution,
+        .certificate-item .institution {
+            margin: 2px 0;
+            color: var(--blue);
+            font-size: 12px;
+            font-weight: 650;
+        }
+
+        .meta {
+            color: var(--muted);
+            font-size: 11px;
+        }
+
+        .certificate-link {
+            display: inline-block;
+            margin-top: 6px;
+            color: var(--blue);
+            font-size: 12px;
+            font-weight: 700;
+        }
+
+        .certificate-link:hover {
+            text-decoration: underline;
+        }
+
+        .achievements {
+            margin: 0;
+            padding-left: 18px;
+            color: #526176;
+            font-size: 12.5px;
+        }
+
+        .achievements li {
+            margin-bottom: 7px;
+        }
+
+        .footer {
+            margin-top: 42px;
+            padding-top: 16px;
+            border-top: 1px solid var(--border);
+            color: #94a3b8;
+            font-size: 10px;
+            text-align: center;
+        }
+
+        /* Responsive */
+
+        @media (max-width: 780px) {
+            body {
+                padding: 0;
+                background: white;
+            }
+
+            .resume {
+                display: block;
+                border-radius: 0;
+                box-shadow: none;
+            }
+
+            .sidebar {
+                padding: 35px 28px;
+            }
+
+            .content {
+                padding: 35px 28px 42px;
+            }
+
+            .sidebar-section {
+                margin-top: 25px;
+            }
+
+            .projects {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .job-header {
+                display: block;
+            }
+
+            .job-date {
+                display: block;
+                margin-top: 4px;
+            }
+
+            .intro h2 {
+                font-size: 22px;
+            }
+        }
+
+        /* Print */
+
+        @media print {
+            @page {
+                size: A4;
+                margin: 10mm;
+            }
+
+            html {
+                scroll-behavior: auto;
+            }
+
+            body {
+                padding: 0;
+                background: white;
+                font-size: 10pt;
+                print-color-adjust: exact;
+                -webkit-print-color-adjust: exact;
+            }
+
+            .resume {
+                display: grid;
+                grid-template-columns: 27% 73%;
+                width: 100%;
+                overflow: visible;
+                border-radius: 0;
+                box-shadow: none;
+            }
+
+            .sidebar {
+                padding: 25px 18px;
+                background: var(--navy) !important;
+                print-color-adjust: exact;
+                -webkit-print-color-adjust: exact;
+            }
+
+            .content {
+                padding: 25px 26px;
+            }
+
+            .identity h1 {
+                font-size: 22px;
+            }
+
+            .intro h2 {
+                font-size: 20px;
+            }
+
+            .section {
+                margin-top: 25px;
+            }
+
+            .experience-item,
+            .education-item,
+            .certificate-item,
+            .project {
+                break-inside: avoid;
+                page-break-inside: avoid;
+            }
+
+            .experience-item {
+                margin-bottom: 20px;
+            }
+
+            .projects {
+                gap: 8px;
+            }
+
+            a {
+                text-decoration: none;
+            }
+
+            .footer {
+                margin-top: 25px;
+            }
+        }
+    </style>
 </head>
+
 <body>
-  <div class="page">
-    <div class="resume">
-      <aside>
-        <div class="side-title">Contact</div>
-        <ul class="contact-list">
-          <li><strong>Location</strong><br>Brandýs nad Labem, Czechia</li>
-          <li><strong>Email</strong><br><a href="mailto:J.Faremir.B@gmail.com">J.Faremir.B@gmail.com</a></li>
-          <li><strong>Phone</strong><br><a href="tel:+420603795126">+420 603 795 126</a></li>
-          <li><strong>GitHub</strong><br><a href="https://github.com/faremir">github.com/faremir</a></li>
-        </ul>
+<div class="resume">
 
-        <div class="side-title">Technical skills</div>
-        <div class="skill-group">
-          <strong>Languages</strong>
-          <p>Python, JavaScript, PHP, Java, C#, C, C++, SQL, SOQL, Lua</p>
-        </div>
-        <div class="skill-group">
-          <strong>Frameworks &amp; platforms</strong>
-          <p>Odoo, Django, Flask, React, React Native, Magento, Laravel, Symfony, .NET, jQuery, Bootstrap, WordPress</p>
-        </div>
-        <div class="skill-group">
-          <strong>Web &amp; APIs</strong>
-          <p>REST APIs, microservices, HTML, XHTML, CSS, Sass, Less</p>
-        </div>
-        <div class="skill-group">
-          <strong>Databases</strong>
-          <p>PostgreSQL, MySQL</p>
-        </div>
-
-        <div class="side-title">Infrastructure &amp; tools</div>
-        <div class="skill-group">
-          <strong>Cloud &amp; systems</strong>
-          <p>AWS, Google Cloud Platform, AWS IoT Greengrass, Linux and Windows Server administration, Apache, NGINX, SSH, PuTTY</p>
-        </div>
-        <div class="skill-group">
-          <strong>DevOps &amp; automation</strong>
-          <p>CI/CD, Infrastructure as Code (IaC), automated provisioning and deployment</p>
-        </div>
-        <div class="skill-group">
-          <strong>Monitoring &amp; observability</strong>
-          <p>Grafana, Prometheus, Loki, Sentry</p>
-        </div>
-        <div class="skill-group">
-          <strong>Development tools</strong>
-          <p>JetBrains IDEs, Visual Studio, VS Code, Git, GitHub, Bitbucket, DBeaver, MySQL Workbench, phpMyAdmin</p>
-        </div>
-
-        <div class="side-title">Languages</div>
-        <ul class="plain-list">
-          <li>Czech — Native</li>
-          <li>English — Professional</li>
-          <li>German — Elementary</li>
-        </ul>
-      </aside>
-
-      <main>
-        <header>
-          <h1>Jiří Blahút</h1>
-          <div class="role">Software Developer · Backend &amp; Full-Stack</div>
-          <p class="intro">Experienced PHP, .NET and Python developer with a background in full-stack web development, software engineering, system administration and database management. Focused on building reliable business applications, backend services, integrations and automated infrastructure.</p>
-          <nav class="top-links" aria-label="CV links">
-            <a href="https://github.com/faremir">GitHub profile</a>
-            <a href="https://github.com/Faremir/Faremir.github.io/tree/main/CERT">Certificates</a>
-            <a href="mailto:J.Faremir.B@gmail.com">Contact</a>
-          </nav>
+    <aside class="sidebar">
+        <header class="identity">
+            <h1>Jiří Blahút</h1>
+            <p class="role">Senior Software Developer</p>
         </header>
 
-        <section class="section">
-          <h2 class="section-title">Work experience</h2>
+        <section class="sidebar-section">
+            <h2 class="sidebar-heading">Contact</h2>
 
-          <article class="entry">
-            <div class="entry-head">
-              <div><h3>Career Break</h3><div class="company">Personal Travel &amp; Development</div></div>
-              <div class="date">Jan 2026 – Nov 2026</div>
+            <div class="contact-item">
+                <span class="contact-label">Location</span>
+                <span>Stará Boleslav, Czech Republic</span>
             </div>
-            <ul>
-              <li>Took a planned career break to travel, spend time with family and pursue personal interests.</li>
-              <li>Used the opportunity to broaden personal and international experience while taking time away from full-time professional commitments.</li>
-            </ul>
-          </article>
 
-          <article class="entry">
-            <div class="entry-head">
-              <div><h3>Senior Application Developer</h3><div class="company">GymBeam Czech s.r.o.</div></div>
-              <div class="date">Nov 2021 – Dec 2025</div>
+            <div class="contact-item">
+                <span class="contact-label">Phone</span>
+                <a href="tel:+420603795126">+420 603 795 126</a>
             </div>
-            <div class="location">Prague, Czechia</div>
-            <ul>
-              <li>Full-stack development across multiple projects, primarily using Python and Odoo.</li>
-              <li>Designed, developed and maintained reusable backend modules, microservices, REST APIs and system integrations.</li>
-              <li>Integrated internal business systems with third-party platforms and services, including e-commerce, financial and government systems.</li>
-              <li>Designed technical solutions for business requirements, from initial concept through production deployment.</li>
-              <li>Built CI/CD pipelines and processes, driving development automation and Infrastructure as Code adoption.</li>
-              <li>Automated development, deployment and infrastructure management to improve consistency, reliability and operational efficiency.</li>
-              <li>Developed and maintained cloud-based solutions and infrastructure on AWS and Google Cloud Platform.</li>
-              <li>Implemented application monitoring, centralized logging, metrics collection, error tracking and diagnostics using the Grafana stack and Sentry.</li>
-              <li>Contributed to code reviews, software testing and continuous improvement of development standards and maintainability.</li>
-            </ul>
-            <div class="subheading">Selected projects</div>
-            <ul>
-              <li><strong>Odoo Business Applications:</strong> Odoo module development, business workflows and external service integrations.</li>
-              <li><strong>Pickup-point Kiosk System:</strong> Applications for Android-based kiosk devices running on Raspberry Pi, with automated remote deployment and management through AWS IoT Greengrass.</li>
-              <li><strong>Warehouse Management Application:</strong> Standalone warehouse application integrating multiple business systems, including Odoo and Magento.</li>
-              <li><strong>E-commerce Integration Services:</strong> Microservices and API endpoints handling high volumes of concurrent requests between e-commerce platforms and internal ordering systems.</li>
-              <li><strong>Cloud Infrastructure &amp; Automation:</strong> Automated infrastructure provisioning, deployment workflows and cloud solutions across AWS and GCP.</li>
-              <li><strong>Monitoring &amp; Observability:</strong> Monitoring, centralized logging, metrics collection and diagnostics using Grafana, Prometheus, Loki and Sentry.</li>
-              <li><strong>Third-party Integrations:</strong> Connections between internal applications, business processes, external platforms and APIs.</li>
-            </ul>
-          </article>
 
-          <article class="entry">
-            <div class="entry-head">
-              <div><h3>Full Stack Developer</h3><div class="company">Flying Academy s.r.o.</div></div>
-              <div class="date">Feb 2019 – Oct 2021</div>
+            <div class="contact-item">
+                <span class="contact-label">Email</span>
+                <a href="mailto:J.Faremir.B@gmail.com">J.Faremir.B@gmail.com</a>
             </div>
-            <div class="location">Prague, Czech Republic</div>
-            <ul>
-              <li>Full-stack development and software engineering across internal and customer-facing projects.</li>
-              <li>Designed, developed and automated internal business processes and workflows.</li>
-              <li>Handled technical planning, solution design, project preparation, presentations and implementation.</li>
-              <li>Researched, evaluated and implemented hardware and software solutions to meet business requirements.</li>
-              <li>Administered on-premises and cloud-hosted Windows and Linux web servers and database systems.</li>
-              <li>Managed, maintained and developed company IT infrastructure, including remote access and centralized hardware management.</li>
-              <li>Integrated internal systems and infrastructure with third-party platforms and external services.</li>
-              <li>Coordinated technical work with multiple international company branches.</li>
-            </ul>
-            <div class="subheading">Selected projects</div>
-            <ul>
-              <li><strong>Learning &amp; School Management Information System:</strong> Integrated platform for learning management, testing and school administration.</li>
-              <li><strong>Online Learning &amp; Livestream Platform:</strong> Interactive livestream classes with automated data processing and interactive learning content.</li>
-              <li><strong>Aircraft &amp; Airport Monitoring Systems:</strong> Aircraft tracking and management systems, airport weather monitoring, data processing and visualization.</li>
-              <li><strong>COVID-19 Remote Work Infrastructure:</strong> Secure remote access to internal systems and remote hardware management across international branches.</li>
-              <li><strong>Third-party System Integrations:</strong> Integrations with Salesforce, Google services, U-attend, T-Mobile and other external platforms.</li>
-            </ul>
-          </article>
 
-          <article class="entry">
-            <div class="entry-head">
-              <div><h3>Developer &amp; System Administrator</h3><div class="company">Door Financial a.s.</div></div>
-              <div class="date">Jul 2012 – Feb 2014</div>
+            <div class="contact-item">
+                <span class="contact-label">Website</span>
+                <a href="https://faremir.github.io">faremir.github.io</a>
             </div>
-            <div class="location">Brandýs nad Labem – Stará Boleslav, Czech Republic</div>
-            <ul>
-              <li>Developed an internal system and database in a small team, including full documentation.</li>
-              <li>Responsible for day-to-day IT infrastructure operations and administration.</li>
-              <li>Provided hardware and software support.</li>
-              <li>Created and managed multiple localizations of internal systems.</li>
-            </ul>
-          </article>
+
+            <div class="contact-item">
+                <span class="contact-label">GitHub</span>
+                <a href="https://github.com/faremir">github.com/faremir</a>
+            </div>
         </section>
 
-        <section class="section">
-          <h2 class="section-title">Education</h2>
-          <article class="entry">
-            <div class="entry-head"><div><h3>Applied Informatics</h3><div class="company">Masaryk University</div></div><div class="date">Sep 2015 – Jan 2019</div></div>
-            <div class="location">Brno, Czech Republic</div>
-          </article>
-          <article class="entry">
-            <div class="entry-head"><div><h3>General Studies</h3><div class="company">Gymnázium J. S. Machara</div></div><div class="date">Sep 2006 – Jun 2014</div></div>
-            <div class="location">Brandýs nad Labem – Stará Boleslav, Czech Republic</div>
-          </article>
+        <section class="sidebar-section">
+            <h2 class="sidebar-heading">Languages</h2>
+
+            <div class="language">
+                <span>Czech</span>
+                <span>Native</span>
+            </div>
+            <div class="language">
+                <span>English</span>
+                <span>Professional</span>
+            </div>
+            <div class="language">
+                <span>German</span>
+                <span>Elementary</span>
+            </div>
         </section>
 
-        <section class="section">
-          <h2 class="section-title">Certificates</h2>
-          <div class="certificate">
-            <strong>Agile &amp; Scrum Fundamentals</strong>
-            <span>ScrumDesk Company · November 2022</span>
-            <p class="small-note" style="margin:8px 0 0">Interactive training covering Agile philosophy, principles and practices. <a href="https://github.com/Faremir/Faremir.github.io/tree/main/CERT">View certificates in the repository</a>.</p>
-          </div>
+        <section class="sidebar-section">
+            <h2 class="sidebar-heading">Programming</h2>
+
+            <div class="skill-group">
+                <h4>Languages</h4>
+                <p>Python, JavaScript, PHP, Java, C#, C, C++, SQL, SOQL, Lua</p>
+            </div>
+
+            <div class="skill-group">
+                <h4>Web Technologies</h4>
+                <p>REST APIs, Microservices, HTML, XHTML, CSS, Sass, Less</p>
+            </div>
+
+            <div class="skill-group">
+                <h4>Frameworks &amp; Platforms</h4>
+                <p>React, React Native, Odoo, Django, Flask, Magento, Laravel, Symfony, .NET, jQuery, Bootstrap, WordPress</p>
+            </div>
+
+            <div class="skill-group">
+                <h4>Databases</h4>
+                <p>PostgreSQL, MySQL</p>
+            </div>
         </section>
 
-        <section class="section">
-          <h2 class="section-title">Competitions &amp; achievements</h2>
-          <ul>
-            <li>Organised the Odoo Coffee event in Brno, 2023.</li>
-            <li>Participated in Odoo Hackathon #2 with the GymBeam/Dedoles team.</li>
-            <li>Participated in Game Jam 2020.</li>
-            <li>Placed among the top 200 in the annual Advent of Code ranking.</li>
-            <li>Participated in Google Code Jam 2019 – Round 2.</li>
-          </ul>
+        <section class="sidebar-section">
+            <h2 class="sidebar-heading">Infrastructure &amp; Tools</h2>
+
+            <div class="skill-group">
+                <h4>Cloud &amp; Infrastructure</h4>
+                <p>AWS, Google Cloud Platform, AWS IoT Greengrass, Linux &amp; Windows Server administration, Apache, NGINX, SSH, PuTTY</p>
+            </div>
+
+            <div class="skill-group">
+                <h4>DevOps &amp; Automation</h4>
+                <p>CI/CD pipeline design and implementation, Infrastructure as Code (IaC)</p>
+            </div>
+
+            <div class="skill-group">
+                <h4>Monitoring &amp; Observability</h4>
+                <p>Grafana, Prometheus, Loki, Sentry</p>
+            </div>
+
+            <div class="skill-group">
+                <h4>Development Tools</h4>
+                <p>JetBrains IDEs, Visual Studio, Visual Studio Code, Git, GitHub, Bitbucket</p>
+            </div>
+
+            <div class="skill-group">
+                <h4>Business &amp; Database Tools</h4>
+                <p>DBeaver, MySQL Workbench, phpMyAdmin</p>
+            </div>
         </section>
-      </main>
-    </div>
-    <footer>Jiří Blahút · Curriculum Vitae · <a href="https://github.com/faremir">GitHub</a></footer>
-  </div>
+    </aside>
+
+
+    <main class="content">
+
+        <header class="intro">
+            <p class="eyebrow">Curriculum Vitae</p>
+            <h2>Backend Engineering &amp; Business Application Development</h2>
+            <p>
+                Senior Software Developer specializing in backend engineering,
+                business application development, system integration, and
+                infrastructure automation. Experienced in building and
+                maintaining business-critical systems, designing integrations,
+                and delivering solutions from initial concept through production
+                deployment.
+                <br><br>
+                Seeking to take the next career step with a respected organisation.
+            </p>
+        </header>
+
+
+        <section class="section">
+            <h2 class="section-heading">Professional Experience</h2>
+
+            <article class="experience-item">
+                <div class="job-header">
+                    <div>
+                        <h3 class="job-title">Career Break</h3>
+                        <p class="job-company">Personal Travel &amp; Development</p>
+                    </div>
+                    <span class="job-date">Jan 2026 – Nov 2026</span>
+                </div>
+
+                <p class="job-location">Personal sabbatical</p>
+
+                <ul>
+                    <li>Took a planned career break to travel, spend time with family, and pursue personal interests.</li>
+                    <li>Used the opportunity to broaden personal and international experience while taking time away from full-time professional commitments.</li>
+                </ul>
+            </article>
+
+
+            <article class="experience-item">
+                <div class="job-header">
+                    <div>
+                        <h3 class="job-title">Senior Application Developer</h3>
+                        <p class="job-company">GymBeam Czech s.r.o.</p>
+                    </div>
+                    <span class="job-date">Nov 2021 – Dec 2025</span>
+                </div>
+
+                <p class="job-location">Prague, Czech Republic</p>
+
+                <ul>
+                    <li>Full-stack development across multiple projects, primarily using Python and Odoo.</li>
+                    <li>Design, development, and maintenance of efficient, reusable backend modules, microservices, REST APIs, and system integrations.</li>
+                    <li>Integration of internal business systems with third-party platforms and services, including e-commerce, financial, and government systems.</li>
+                    <li>Design and implementation of technical solutions for business requirements, from initial concept to production deployment.</li>
+                    <li>Design and implementation of CI/CD pipelines and processes from the ground up, driving development automation and Infrastructure as Code (IaC) adoption.</li>
+                    <li>Driving automation initiatives across development, deployment, and infrastructure management to improve consistency, reliability, and operational efficiency.</li>
+                    <li>Development, deployment, and maintenance of cloud-based solutions and infrastructure using AWS and Google Cloud Platform (GCP).</li>
+                    <li>Application performance monitoring, centralized logging, metrics collection, error tracking, and diagnostics using the Grafana stack and Sentry.</li>
+                    <li>Code reviews, software testing, and continuous improvement of development standards, code quality, and maintainability.</li>
+                </ul>
+
+                <h4 class="subheading">Selected Projects</h4>
+
+                <div class="projects">
+                    <div class="project">
+                        <h4>Odoo Business Applications</h4>
+                        <p>Development and customization of Odoo modules, business workflows, and integrations with external services.</p>
+                    </div>
+
+                    <div class="project">
+                        <h4>Pickup-point Kiosk System</h4>
+                        <p>Applications for Android-based kiosk devices running on Raspberry Pi, with automated remote deployment and management through AWS IoT Greengrass.</p>
+                    </div>
+
+                    <div class="project">
+                        <h4>Warehouse Management Application</h4>
+                        <p>Development of a standalone warehouse application with API integrations connecting multiple business systems, including Odoo and Magento.</p>
+                    </div>
+
+                    <div class="project">
+                        <h4>E-commerce Integration Services</h4>
+                        <p>Microservices and API endpoints handling high volumes of concurrent requests between e-commerce platforms and internal ordering systems.</p>
+                    </div>
+
+                    <div class="project">
+                        <h4>Cloud Infrastructure &amp; Automation</h4>
+                        <p>Automated infrastructure provisioning, deployment workflows, and cloud-based solutions across AWS and GCP.</p>
+                    </div>
+
+                    <div class="project">
+                        <h4>Monitoring &amp; Observability</h4>
+                        <p>Implementation of monitoring, centralized logging, metrics collection, and application diagnostics using Grafana, Prometheus, Loki, and Sentry.</p>
+                    </div>
+
+                    <div class="project">
+                        <h4>Third-party Integrations</h4>
+                        <p>Integration of internal applications and business processes with external platforms, services, and APIs.</p>
+                    </div>
+                </div>
+            </article>
+
+
+            <article class="experience-item">
+                <div class="job-header">
+                    <div>
+                        <h3 class="job-title">Full Stack Developer</h3>
+                        <p class="job-company">Flying Academy s.r.o.</p>
+                    </div>
+                    <span class="job-date">Feb 2019 – Oct 2021</span>
+                </div>
+
+                <p class="job-location">Prague, Czech Republic</p>
+
+                <ul>
+                    <li>Full-stack development and software engineering across multiple internal and customer-facing projects.</li>
+                    <li>Design, development, and automation of internal business processes and workflows.</li>
+                    <li>Technical planning, solution design, project preparation, presentation, and implementation.</li>
+                    <li>Research, evaluation, and implementation of new hardware and software solutions to meet business requirements.</li>
+                    <li>Administration and maintenance of on-premises and cloud-hosted Windows and Linux web servers and database systems.</li>
+                    <li>Day-to-day management, maintenance, and development of the company's IT infrastructure.</li>
+                    <li>Implementation and maintenance of infrastructure solutions, remote access, and centralized hardware management.</li>
+                    <li>Integration of internal systems and infrastructure with third-party platforms and external services.</li>
+                    <li>Technical cooperation and coordination with multiple international company branches.</li>
+                </ul>
+
+                <h4 class="subheading">Selected Projects</h4>
+
+                <div class="projects">
+                    <div class="project">
+                        <h4>Learning &amp; School Management Information System</h4>
+                        <p>Development of an integrated platform for learning management, testing, and school administration.</p>
+                    </div>
+
+                    <div class="project">
+                        <h4>Online Learning &amp; Livestream Platform</h4>
+                        <p>Interactive livestream classes, including automated data processing and integration of interactive learning content.</p>
+                    </div>
+
+                    <div class="project">
+                        <h4>Aircraft &amp; Airport Monitoring Systems</h4>
+                        <p>Aircraft tracking and management systems, as well as airport weather monitoring solutions, including data processing and visualization.</p>
+                    </div>
+
+                    <div class="project">
+                        <h4>COVID-19 Remote Work Infrastructure</h4>
+                        <p>Design and implementation of remote working infrastructure, providing employees with secure remote access to internal systems and remote hardware management across international branches.</p>
+                    </div>
+
+                    <div class="project">
+                        <h4>Third-party System Integrations</h4>
+                        <p>Integration of internal infrastructure and business applications with external services and platforms, including Salesforce, Google services, U-attend, and T-Mobile.</p>
+                    </div>
+                </div>
+            </article>
+
+
+            <article class="experience-item">
+                <div class="job-header">
+                    <div>
+                        <h3 class="job-title">Developer &amp; System Administrator</h3>
+                        <p class="job-company">Door Financial a.s.</p>
+                    </div>
+                    <span class="job-date">Jul 2012 – Feb 2014</span>
+                </div>
+
+                <p class="job-location">Brandýs nad Labem – Stará Boleslav, Czech Republic</p>
+
+                <ul>
+                    <li>Developed an internal system and database in a small team, including full documentation.</li>
+                    <li>Responsible for day-to-day operations and administration of IT infrastructure.</li>
+                    <li>Provided hardware and software support.</li>
+                    <li>Created and managed multiple localizations of internal systems.</li>
+                </ul>
+            </article>
+        </section>
+
+
+        <section class="section">
+            <h2 class="section-heading">Education</h2>
+
+            <div class="education-item">
+                <h3>Applied Informatics</h3>
+                <p class="institution">Masaryk University</p>
+                <span class="meta">September 2015 – January 2019 · Brno, Czech Republic</span>
+            </div>
+
+            <div class="education-item">
+                <h3>General Studies</h3>
+                <p class="institution">Gymnázium J. S. Machara</p>
+                <span class="meta">September 2006 – June 2014 · Brandýs nad Labem – Stará Boleslav, Czech Republic</span>
+            </div>
+        </section>
+
+
+        <section class="section">
+            <h2 class="section-heading">Certifications</h2>
+
+            <div class="certificate-item">
+                <h3>Agile &amp; Scrum Fundamentals</h3>
+                <p class="institution">ScrumDesk Company</p>
+                <span class="meta">November 2022 · Trainer: Dušan Kocúrek</span>
+                <p class="meta">
+                    The unique interactive basic training about Agile philosophy,
+                    principles, and practices.
+                </p>
+                <a class="certificate-link"
+                   href="https://faremir.github.io/assets/documents/certificates/Agile_and_Scrum_Fundamentals.pdf"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                    View certificate ↗
+                </a>
+            </div>
+        </section>
+
+
+        <section class="section">
+            <h2 class="section-heading">Competitions &amp; Achievements</h2>
+
+            <ul class="achievements">
+                <li>Organization of Odoo Coffee event in Brno, 2023.</li>
+                <li>Participation in Odoo Hackathon #2 with the GymBeam/Dedoles team.</li>
+                <li>Participation in Game Jam 2020.</li>
+                <li>Annual Advent of Code ranking among the top 200 participants.</li>
+                <li>Participation in Google's Code Jam 2019 – Round 2.</li>
+            </ul>
+        </section>
+
+
+        <footer class="footer">
+            Jiří Blahút · Senior Software Developer
+        </footer>
+
+    </main>
+</div>
 </body>
 </html>
